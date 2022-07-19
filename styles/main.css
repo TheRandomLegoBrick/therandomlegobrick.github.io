@@ -1,0 +1,34 @@
+.scrabled {
+	font-family: monospace;
+}
+
+#sidebar {
+	width: 300px;
+	height: 100vh;
+	position: absolute;
+	background: #FAFAFA;
+	top: 0;
+	left: -275px;
+	border-right: 2px solid #EEEEEE;
+}
+
+#content {
+	transition: 500ms;
+	margin-left: 50px;
+}
+
+#sidebar a {
+	display: block;
+	margin-left: 60px;
+	text-align: right;
+	margin: 20px;
+}
+
+#sidebar:hover ~ #content {
+	margin-left: 280px;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
