@@ -28,11 +28,20 @@
 
 #sidebar a {
 	display: block;
-	margin-left: 60px;
-	text-align: right;
-	margin: 20px;
+	text-align: center;
+	padding: 10px;
+	margin-left: 50px;
 	font-family: "Share Tech Mono", monospace;
 	font-size: 18px;
+	text-decoration: none;
+	color: coral;
+	transition: 200ms;
+}
+
+#sidebar a:hover {
+	background: coral;
+	color: white;
+	padding: 15px;
 }
 
 #sidebar:hover ~ #content {
