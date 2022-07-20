@@ -23,7 +23,8 @@ var sbpos = 0;
 var sin = Math.sin;
 var bounce = 0;
 var mainloop = window.setInterval(() => {
-
+	drawHeader()
+	
 	if(count%10 === 0){
 		for(let i = 0; i < scrabledElements.length; i++){
 			scrabledElements[i].innerText = scrabledText(7)
@@ -33,7 +34,7 @@ var mainloop = window.setInterval(() => {
 	if(sidebarHover){
 		sbpos = lerp(sbpos, -50 + sin(count*0.3)*bounce, 0.2);
 	}else{
-		sbpos = lerp(sbpos, -275 + sin(count*0.3)*bounce, 0.2);
+		sbpos = lerp(sbpos, -375 + sin(count*0.3)*bounce, 0.2);
 	}
 
 	bounce = Math.max(0, lerp(bounce, -1, 0.1));
@@ -43,7 +44,7 @@ var mainloop = window.setInterval(() => {
 }, 1000/60)
 
 sidebar.addEventListener('mouseover', (event) => {
-	if(bounce <= 0){
+	if(!sidebarHover){
 		bounce = 200;
 		sidebarHover = true;
 		count = 0;

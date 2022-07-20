@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>RandomLegoBrick</title>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/theme.css">
 		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/interactive.css">
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Bungee">
+
 	</head>
+	<body>
 
-	<div id = "sidebar">
-		<a href="#">Home</a>
-		<a href="#">About</a>
-		<a href="#">Projects</a>
-		<a href="#">Lego Builds & Instructions</a>
-	</div>
+		<!-- Nav bar -->
+		<div id = "sidebar">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Projects</a>
+			<a href="#">Lego Builds & Instructions</a>
+		</div>
 
-	<div id = "content">
-		<h1>Page Header</h1>
-		<button>&lt;- Node.js</button>
-		<button>Minetest -&gt;</button>
-	</div>
+		<!-- Pages -->
+		<div id = "content">
+			
+			<canvas id="headerBG"></canvas>
+			<h1 id = "main-header"><span style="color:seagreen;">RANDOM</span><span style="color:tomato;">LEGO</span><span style="color:dodgerblue;">BRICK</span></h1>
 
-	<script src="scripts/main.js"></script>
+			<button class="ripple">&lt;- Node.js</button>
+			<button class="ripple">Minetest -&gt;</button>
+		</div>
+
+		<!-- Scripts -->
+		<script src="scripts/header.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/ripple_btn.js"></script>
+		<script src="scripts/paralax.js"></script>
+	</body>
 </html>

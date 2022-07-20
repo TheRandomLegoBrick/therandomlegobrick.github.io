@@ -1,0 +1,21 @@
+:root {
+	--blue: dodgerblue;
+	--green: seagreen;
+	--main: white;
+	--shadow: lightgrey;
+	--tableodd: rgb(245, 245, 245);
+	--tableeven: white;
+	--font: black;
+	--darkshadow: lightgrey;
+}
+
+.dark {
+	--blue: dodgerblue;
+	--green: seagreen;
+	--main: rgb(60, 60, 65);
+	--shadow: darkgrey;
+	--tableodd: rgb(90, 90, 100);
+	--tableeven: rgb(70, 70, 75);
+	--font: white;
+	--darkshadow: rgba(0, 0, 0, 0.2);
+}

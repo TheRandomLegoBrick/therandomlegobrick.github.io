@@ -2,14 +2,23 @@
 	font-family: monospace;
 }
 
+#headerBG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
 #sidebar {
-	width: 300px;
+	width: 400px;
 	height: 100vh;
 	position: absolute;
 	background: #FAFAFA;
 	top: 0;
 	left: -275px;
-	border-right: 2px solid #EEEEEE;
+	border-right: 2px solid #DDD;
+	z-index: 10;
+	box-shadow: 0 0 5px var(--darkshadow);
 }
 
 #content {
@@ -22,13 +31,24 @@
 	margin-left: 60px;
 	text-align: right;
 	margin: 20px;
+	font-family: "Share Tech Mono", monospace;
+	font-size: 18px;
 }
 
 #sidebar:hover ~ #content {
-	margin-left: 280px;
+	margin-left: 375px;
 }
 
 html, body {
 	margin: 0;
 	padding: 0;
+}
+
+button {
+	background: tomato;
+	padding: 5px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Bungee", fantasy;
 }

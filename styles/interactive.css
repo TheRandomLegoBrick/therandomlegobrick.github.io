@@ -1,0 +1,73 @@
+
+.ripple {
+	overflow: hidden;
+	position: relative;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 0.2s;
+	font-size: 18px;
+	font-family: "Share Tech Mono", monospace;
+	box-shadow: 0 5px 5px var(--darkshadow);
+	color: white !important;
+	transition: 0.05s;
+}
+
+.ripple:active {
+	box-shadow: 0 2px 5px var(--darkshadow);
+	transform: translateY(3px);
+}
+
+@keyframes grow{
+	to {
+		transform: scale(40);
+		opacity: 0;
+	}
+}
+.grow {
+	opacity: 0.5;
+	border-radius: 50000px;
+	animation: grow 1s ease-out forwards;
+	background: white;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+}
+
+.switch {
+	cursor: pointer;
+	width: 60px;
+	height: 30px;
+	margin: 20px;
+	display: block;
+}
+
+.switch::before {
+	content: "";
+	background: var(--shadow);
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+.switch::after {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	background: var(--main);
+	border-radius: 100%;
+	margin: 4px;
+	transition: 0.3s;
+}
+
+.switch:checked::after {
+	margin-left: calc(60px - 27px);
+}
+
+.switch:checked::before {
+	background: var(--blue);
+}
